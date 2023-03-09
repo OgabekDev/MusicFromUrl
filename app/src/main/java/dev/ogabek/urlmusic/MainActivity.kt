@@ -146,14 +146,21 @@ fun AudioSection() {
                 )
             }
 
-            Text(
-                text = audioTime(sliderPosition.toInt()),
-                fontFamily = FontFamily.Monospace,
-                fontWeight = FontWeight.Normal,
-                fontSize = 16.sp,
+            Row(
                 modifier = Modifier
-                    .padding(top = 0.dp, start = 0.dp)
-            )
+                    .width(100.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = audioTime(sliderPosition.toInt()),
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 16.sp,
+                    modifier = Modifier
+                        .padding(top = 0.dp, start = 0.dp)
+                )
+            }
 
         }
     }
