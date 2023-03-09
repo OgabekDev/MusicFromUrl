@@ -22,8 +22,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
 import dev.ogabek.urlmusic.ui.theme.UrlMusicTheme
 import kotlinx.coroutines.delay
 
@@ -195,7 +193,7 @@ fun AudioSection() {
     LaunchedEffect(sliderPosition, isPlaying) {
         if (isPlaying) {
             delay(1000L)
-            if (sliderPosition >= (mediaPlayer?.duration ?: 0)) {
+            if (sliderPosition >= 126000) {
                 sliderPosition = 0f
             } else {
                 sliderPosition += 1000L
